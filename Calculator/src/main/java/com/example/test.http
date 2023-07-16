@@ -1,6 +1,8 @@
 ### +
 http://localhost:8080/calculator/plus?num1=5&num2=5
 ### -
+http://localhost:8080/calculator
+### -
 http://localhost:8080/calculator/minus?num1=5&num2=5
 ### *
 http://localhost:8080/calculator/multiply?num1=5&num2=5

@@ -23,14 +23,14 @@ public class CalcSvcImpl implements CalcSVC{
 
     @Override
     public Number divide(int n1, int n2) throws DivisionByZeroException {
-        if(n2==0) throw new DivisionByZeroException("деление на ноль. Охуел?");
+        if(n2==0) throw new DivisionByZeroException("деление на ноль.");
         return (double) n1 /n2;
 
     }
 
     @Override
     public String checkParams(Integer n1, Integer n2) {
-        if (n1==null || n2==null) return "Где все параметры, сцуко?";
+        if (n1==null || n2==null) return "Где все параметры?";
         else return null;
     }
 }

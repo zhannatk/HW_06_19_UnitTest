@@ -27,13 +27,21 @@ class CalcSvcImplTest {
 
     @Test
     void shouldReturnCorrectDivide() {
-        assertEquals(1,svc.divide(5,5));
-        assertEquals(0,svc.divide(0,5));
+        assertEquals(1.0,svc.divide(5,5));
+        assertEquals(0.0,svc.divide(0,5));
     }
 
     @Test
     void shouldSayNoParam() {
-        assertEquals("Где все параметры, сцуко?", svc.checkParams(null,null));
+
+        assertAll(
+                ()-> assertEquals("Где все параметры?", svc.checkParams(5,null)),
+                ()-> assertEquals("Где все параметры?", svc.checkParams(null,5)),
+                ()-> assertEquals("Где все параметры?", svc.checkParams(null,null))
+        );
+
+
+
     }
     @Test
     void shouldTrowIllegal() {

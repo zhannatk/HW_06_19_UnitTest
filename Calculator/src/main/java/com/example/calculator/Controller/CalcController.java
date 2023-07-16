@@ -18,7 +18,7 @@ public class CalcController {
     //    Метод по адресу /calculator должен вернуть приветствие "Добро пожаловать в калькулятор".
     @GetMapping
     String welcome() {
-        return "иди в хуй, здравствуй";
+        return "Велком ту калькулятор";
     }
 
     //    Метод по адресу /calculator/plus?num1=5&num2=5 должен сложить num1 и num2 и вернуть результат в формате "5 + 5 = 10".
@@ -30,20 +30,20 @@ public class CalcController {
     //    Метод по адресу /calculator/minus?num1=5&num2=5 должен вычесть из num1 num2 и вернуть результат в формате "5 − 5 = 0".
     @GetMapping("/minus")
     String minus(@RequestParam(name = "num1", required = false) Integer num1, @RequestParam(name = "num2", required = false) Integer num2) {
-        return checkParamsAndDoOperation(num1, num2,'-');
+        return checkParamsAndDoOperation(num1, num2, '-');
 
     }
 
     //    Метод по адресу /calculator/multiply?num1=5&num2=5 должен умножить num1 на num2 и вернуть результат в формате "5 * 5 = 25".
     @GetMapping("/multiply")
     String multiply(@RequestParam(name = "num1", required = false) Integer num1, @RequestParam(name = "num2", required = false) Integer num2) {
-        return checkParamsAndDoOperation(num1, num2,'*');
+        return checkParamsAndDoOperation(num1, num2, '*');
     }
 
     //    Метод по адресу /calculator/divide?num1=5&num2=5 должен разделить num1 на num2 и вернуть результат в формате "5 / 5 = 1".
     @GetMapping("/divide")
     String divide(@RequestParam(name = "num1", required = false) Integer num1, @RequestParam(name = "num2", required = false) Integer num2) {
-        return checkParamsAndDoOperation(num1, num2,'/');
+        return checkParamsAndDoOperation(num1, num2, '/');
 
     }
 
